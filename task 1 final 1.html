@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up form</title>
+
+  <style>
+
+    #container{
+        background-color: lightpink;
+        height: 980px;
+        border: 24px solid deeppink;
+
+    }
+
+      h1{
+        padding-top: 10px;
+        text-align: center;
+        /* border: 2px solid red; */
+        width: 100vw;
+      }
+
+      h2{
+        padding-left: 103px;
+        margin-top: 0px;
+      }
+
+      .fill{
+        border: 3px solid black;
+        width: 80vw;
+        padding: 13px 10px;
+        border-radius: 11px;
+        margin-left: 102px;
+        margin-bottom: 30px;
+      }
+
+      .radio{
+        display: inline-block;
+        border: 2px solid black;
+        margin-left: 108px;
+        margin-right: 30px;
+      }
+
+      h3{
+        display: inline-block;
+      }
+
+      #second{
+        margin-top: 17px;
+        display: inline-block;
+      }
+      
+      #dropDown{
+        display: inline-block;
+      }
+
+      #go{
+          background-color:deeppink;
+        margin-left: 117px;
+        font-size: 20px; 
+      }
+
+      #go:hover{
+        background-color: lightpink;
+        color: black;
+        border: 2px darkpink;
+      }
+
+  </style>
+
+</head>
+<body>
+  <div id="container">
+        <h1>Sign Up form</h1>
+        <form action="backend.php">
+          <input type="text" name="Name" placeholder="Name" class="fill" required>
+          <input type="email" name="Email" placeholder="Email" class="fill" required>
+          <textarea name="Address" placeholder="Address" class="fill" cols="30" rows="10" required></textarea>
+          <input type="number" name="phone" placeholder="Phone No" class="fill" required>
+          <h2>Choose a field :</h2>
+          <input type="radio" name="field" class="radio" required><h3>HARDWARE</h3>
+          <input type="radio" name="field" class="radio" required><h3>SOFTWARE</h3>
+          <input type="radio" name="field" class="radio" required><h3>DESIGN</h3>
+          <br>
+          <h2 id="second">Choose a skill :</h2>
+          <select name="skill" id="dropDown" required>
+              <option value="html" selected>HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JAVASCRIPT</option>
+          </select>
+          <input type="password" name="password" placeholder="Password" class="fill" required>
+          <input type="password" name="password" placeholder="Re-Enter Password" class="fill" required>
+          <br>
+          <input type="submit" value="Send" class="fill" id="go">
+
+        </form>
+  </div>
+</body>
+</html>
